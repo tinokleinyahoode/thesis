@@ -1,0 +1,38 @@
+{
+  "name": "thesis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "sudo node app"
+  },
+  "author": "Tino Klein",
+  "license": "ISC",
+  "dependencies": {
+    "@types/i2c-bus": "^5.1.0",
+    "adm-zip": "^0.4.16",
+    "ads1115": "^1.2.0",
+    "blob": "^0.1.0",
+    "bme280-sensor": "^0.1.7",
+    "file-system": "^2.2.2",
+    "fs": "0.0.1-security",
+    "ftp": "^0.3.10",
+    "glob": "^7.1.6",
+    "h264-converter": "^0.1.1",
+    "i2c-bus": "^5.2.0",
+    "jest": "^26.2.2",
+    "johnny-five": "^2.0.0",
+    "jszip": "^3.5.0",
+    "path": "^0.12.7",
+    "pi-camera": "^1.3.0",
+    "raspi": "^6.0.1",
+    "raspi-gpio": "^6.2.2",
+    "raspi-i2c": "^6.2.4",
+    "raspi-io": "^11.0.0",
+    "raspi-kit-ads1x15": "^1.0.0",
+    "serialport": "^9.0.0",
+    "unzip2": "^0.2.5",
+    "unzipper": "^0.10.11"
+  }
+}

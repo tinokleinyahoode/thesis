@@ -1,3 +1,4 @@
+
 let errorCount = 0;
 let startCount = 0;
 let result;
@@ -13,8 +14,16 @@ let POST_COMMANDS = [
 
 POST_COMMANDS_RESET = [...POST_COMMANDS];
 
-const post = (port, parser, sensorData, url = 'http://ttthesis.herokuapp.com/pillar') => {
+const post = (port, parser, sensorData, url = 'http://ttthesis.herokuapp.com/pillar', reset = false) => {
 	return new Promise((resolve, reject) => {
+
+		if(reset === true){
+			POST_COMMANDS = [...POST_COMMANDS_RESET];
+			startCount = 0;
+			errorCount = 0;
+			resolve(true);
+		} 
+
 		write(port, POST_COMMANDS[0] + url);
 
 		const parsePost = data => {
@@ -97,6 +106,7 @@ const evaluatePost = (port, data, sensorData) => {
 			} else {
 				startCount = 0;
 				POST_COMMANDS = [...POST_COMMANDS_RESET];
+				errorCount = 0;
 			}
 			break;
 	}

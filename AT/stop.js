@@ -69,7 +69,12 @@ const evaluateStop = (port, data) => {
                 errorCount++;
             }else{ 
                 errorCount = 0;
-                return false;
+                if (STOP_COMMANDS.length != 0) {
+                    currentCommand = STOP_COMMANDS.shift();
+                    write(port, currentCommand);
+                }else{
+                    return true;
+                }
             }    
     }
 }

@@ -8,10 +8,10 @@ const stop = require('./stop');
 errorCount = 0;
 startCount = 0;
 
-let input, output;
+let soilInput, output;
 
 raspi.init(() => {
-    input = new gpio.DigitalInput({
+    soilInput= new gpio.DigitalInput({
       pin: 'GPIO21',
       pullResistor: gpio.PULL_DOWN
     });
@@ -49,7 +49,7 @@ const start = () => {
 				resolve({ 
 					port: port, 
 					parser: parser, 
-					input: input, 
+					soilInput: soilInput, 
 					output: output,
 					gpio: gpio 
 				});

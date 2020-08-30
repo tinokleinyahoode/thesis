@@ -1,7 +1,7 @@
-const start = require("./controller/start");
-const stop = require("./controller/stop");
+const start = require("./AT/start");
+const stop = require("./AT/stop");
 const doUpdate = require('./update/update2');
-const post = require('./controller/post');
+const post = require('./AT/post');
 const glob = require('glob');
 
 let hb, shb, conf, restartTimeout;
